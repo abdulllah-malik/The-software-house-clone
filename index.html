@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- <style>
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 0.75rem;
+        }
+    </style> -->
+
+</head>
+
+<body>
+    <!-- 
+    <nav class="navbar navbar-expand-xxl navbar-none bg-none" aria-label="Seventh navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"><svg class="site-header__logo-img" fill="none" height="52"
+                    viewBox="0 0 196 92" width="96" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#000">
+                        <path
+                            d="m0 0v72.4943l20.2003 6.0728 17.296 5.4851 22.7818 6.9869v-78.3948zm37.4963 72.0372-17.2654 6.5382v-33.0558l17.2654 4.1201z">
+                        </path>
+                        <path
+                            d="m76.358 77.6542h-5.034v-8.2929h-4.324v21.6792h4.324v-9.6643h5.034v9.6643h4.324v-21.6792h-4.324z">
+                        </path>
+                        <path
+                            d="m96.9616 72.1833c-.5163-.9795-1.2908-1.7631-2.1943-2.3507-2.4524-1.1101-5.2921-1.1101-7.7445 0-.9681.5223-1.7425 1.3712-2.1943 2.3507-.5163 1.1101-.9035 2.3508-.9681 3.5914-.3227 3.0038-.3227 6.0728 0 9.0765.1291 1.2407.4518 2.4161.9681 3.5262.5163.9795 1.2907 1.763 2.1943 2.2854 2.4524 1.0448 5.2921 1.0448 7.7445 0 .9681-.5224 1.7425-1.3059 2.1943-2.2854.5163-1.1101.9035-2.2855.968-3.5262.3227-3.0037.3227-6.0727 0-9.0765-.0645-1.3059-.3872-2.4813-.968-3.5914zm-3.1624 11.8191c-.0645.8488-.1936 1.6977-.4517 2.4813-.1291.5224-.4518 1.0448-.9036 1.3713-.968.5877-2.1297.5877-3.0978 0-.4517-.3918-.7744-.8489-.9035-1.3713-.2581-.7836-.3872-1.6325-.3872-2.4813-.0646-1.0448-.0646-2.2855-.0646-3.7221 0-1.4365.0646-2.6772.1291-3.722.0646-.8489.1936-1.6977.3872-2.4813.1291-.5224.4518-1.0448.9036-1.4366.968-.5877 2.1297-.5877 3.0978 0 .4517.3918.7744.8489.9035 1.4366.2581.7836.3872 1.6324.3872 2.4813.1291.9795.1291 2.2202.1291 3.722 0 1.5019-.0645 2.6773-.1291 3.7221z">
+                        </path>
+                        <path
+                            d="m110.008 84.6769c0 .5224 0 .9795-.129 1.5019-.064.3918-.194.7836-.387 1.1754-.194.3265-.452.5877-.775.7836-.387.1959-.839.3265-1.226.2612-.452 0-.839-.0653-1.226-.2612-.323-.1959-.581-.4571-.774-.7836-.194-.3918-.323-.7836-.388-1.1754-.064-.5224-.064-.9795-.064-1.5019v-15.0839h-4.324v15.1493c-.065 1.2406.129 2.416.581 3.5261.322.8489.839 1.5671 1.548 2.0895.646.5224 1.42.8489 2.195.9795.839.1959 1.678.2612 2.581.2612.839 0 1.743-.0653 2.582-.2612.774-.1959 1.549-.5224 2.194-1.0448.645-.5876 1.226-1.3059 1.549-2.1548.452-1.1101.645-2.2855.581-3.4609v-15.0839h-4.324v15.0839z">
+                        </path>
+                        <path
+                            d="m129.692 81.7386c-.387-.4571-.774-.9142-1.291-1.2407-.645-.4571-1.29-.8489-2-1.1101l-3.292-1.4366c-.71-.2612-1.355-.653-1.807-1.2406-.322-.5224-.452-1.1101-.387-1.6978 0-.3265.065-.653.129-.9142.065-.2612.194-.5877.387-.7836.194-.2612.452-.4571.775-.5877.387-.1306.774-.2612 1.226-.1959.71-.0653 1.42.2612 1.807.8489.387.7183.581 1.5672.516 2.3508h4.131v-.5877c0-.9142-.129-1.8284-.517-2.6773-.322-.7183-.774-1.3059-1.355-1.8283-.645-.5224-1.355-.8489-2.065-1.0448-.839-.1959-1.743-.3265-2.646-.3265-1.743-.1306-3.485.4571-4.84 1.5672-1.162 1.0447-1.743 2.6772-1.743 4.7668 0 .7836.129 1.5671.323 2.3507.193.653.581 1.306 1.032 1.7631.517.5224 1.098.9795 1.743 1.3713.774.4571 1.613.7836 2.517 1.0447.645.1959 1.226.4571 1.807.7183.452.1959.839.4571 1.162.7836.258.2612.516.5877.645.9795s.194.8489.194 1.2407c.064.7836-.259 1.5018-.775 2.0242-.516.4571-1.162.653-1.807.653-.452 0-.968-.0653-1.42-.2612-.322-.1306-.645-.3918-.839-.653-.258-.3265-.387-.6529-.452-1.0447-.064-.4571-.129-.9142-.129-1.3713v-.653h-4.324v.8489c-.129 1.6978.452 3.3302 1.549 4.6362 1.033 1.0448 2.775 1.6325 5.228 1.6325 1.936.1306 3.872-.4571 5.486-1.5672 1.29-1.0448 2-2.6773 2-4.9627 0-.5877-.064-1.2407-.193-1.8284-.259-.653-.517-1.1754-.775-1.5671z">
+                        </path>
+                        <path
+                            d="m136.985 81.8691h7.164v-3.5914h-7.164v-5.0933h7.615v-3.5914h-11.939v21.6791h12.262v-3.5914h-7.938z">
+                        </path>
+                        <path d="m71.1844 34.164h4.2595v-18.153h4.7112v-3.5261h-13.682v3.5261h4.7113z"></path>
+                        <path
+                            d="m87.2476 24.6593h5.0339v9.5989h4.3241v-21.6139h-4.3241v8.2277h-5.0339v-8.2277h-4.324v21.6139h4.324z">
+                        </path>
+                        <path
+                            d="m111.507 30.7321h-8.002v-5.8769h7.228v-3.5914h-7.228v-5.0933h7.68l-.065-3.5262h-11.9393v21.6139h12.3263z">
+                        </path>
+                        <path
+                            d="m73.572 63.5036c1.9362.1306 3.8723-.457 5.4857-1.6324 1.2908-1.0448 2.0007-2.6773 2.0007-4.9627 0-.5877-.0645-1.2407-.1936-1.8284-.1291-.5224-.3227-1.0448-.6454-1.5019-.3227-.457-.7744-.9141-1.2262-1.3059-.6454-.4571-1.2908-.8489-2.0007-1.1101l-3.4205-1.4366c-.7099-.2612-1.2907-.7183-1.7425-1.3059-.3227-.5224-.4517-1.1101-.3872-1.6978 0-.3265.0645-.653.1291-.9142.0645-.3265.1936-.5877.3872-.7836.1936-.2612.4518-.4571.7744-.5877.3873-.1306.7745-.1959 1.1617-.1959.7099-.0653 1.4199.2612 1.8071.8489.3872.7183.5808 1.5672.5163 2.3508h4.1949v-.5877c0-.9142-.129-1.8284-.5163-2.6773-.3227-.7183-.7744-1.3059-1.3553-1.8283-.6453-.4571-1.3553-.8489-2.1297-1.0448-.839-.1959-1.7425-.3265-2.6461-.3265-1.7425-.1306-3.485.4571-4.8403 1.5672-1.1617 1.0447-1.7425 2.6772-1.7425 4.7668 0 .7836.1291 1.5671.3227 2.3507.1936.653.5808 1.2407 1.0326 1.7631.5163.5224 1.0971.9795 1.678 1.3713.839.457 1.678.7835 2.5815 1.0447.5808.1959 1.1617.4571 1.7425.7183.4518.1959.839.4571 1.1617.7836.2581.2612.5163.5877.6454.9795.129.3918.1936.8489.1936 1.2407.0645.7835-.2582 1.5018-.7745 2.0242-.5163.3918-1.1617.653-1.807.653-.4518 0-.9681-.0653-1.4199-.2612-.3227-.1306-.6453-.3918-.839-.653-.2581-.3265-.3872-.653-.4517-1.0448-.0646-.457-.1291-.9141-.1291-1.3712v-.653h-4.324v.8489c-.1291 1.6977.4517 3.3955 1.5489 4.6362 1.0326 1.2407 2.7751 1.763 5.2275 1.763z">
+                        </path>
+                        <path
+                            d="m86.157 62.6547c2.4525 1.0447 5.2921 1.0447 7.7446 0 .968-.5224 1.6779-1.306 2.1942-2.2202.5163-1.1101.9036-2.2854.9681-3.5261.3227-3.0038.3227-6.0728 0-9.0765-.1291-1.2407-.4518-2.4161-.9681-3.5915-.5163-.9794-1.2907-1.763-2.1942-2.3507-2.4525-1.1101-5.2921-1.1101-7.7446 0-.968.5224-1.7425 1.3713-2.1942 2.3507-.5163 1.1101-.9036 2.3508-.9681 3.5915-.3227 3.0037-.3227 6.0727 0 9.0765.1291 1.2407.4518 2.416.9681 3.5261.4517.9142 1.2262 1.6978 2.1942 2.2202zm.9681-14.0392c.0645-.8489.1936-1.6978.3872-2.4814.1291-.5224.4518-1.0448.839-1.4366.4518-.3265 1.0326-.4571 1.5489-.4571s1.0972.1306 1.5489.4571c.4518.3918.7745.8489.9036 1.4366.2581.7836.3872 1.6325.3872 2.4814.1291.9794.1291 2.2201.1291 3.722 0 1.5018-.0646 2.6772-.1291 3.722-.0646.8489-.1936 1.6978-.3872 2.4814-.1291.5223-.4518 1.0447-.9036 1.3712-.4517.3265-.968.4571-1.5489.4571-.5808 0-1.0971-.1306-1.5489-.4571-.3872-.3918-.7099-.8489-.839-1.3712-.2581-.7836-.3872-1.6325-.3872-2.4814-.0645-1.0448-.1291-2.2855-.1291-3.722 0-1.4366.0646-2.7426.1291-3.722z">
+                        </path>
+                        <path d="m104.163 53.7088h7.228v-3.5261h-7.228v-5.1586h7.68v-3.5262h-12.0041v21.6139h4.3241z">
+                        </path>
+                        <path d="m117.264 63.1771h4.324v-18.153h4.711v-3.5262h-13.682v3.5262h4.647z"></path>
+                        <path
+                            d="m145.015 41.4326-2.323 16.0635h-.065l-2.452-16.0635h-4.131l-2.581 16.0635h-.065l-2.387-15.9982h-4.131l3.937 21.6139h4.776l2.388-15.737h.064l2.388 15.737h4.84l3.873-21.6792z">
+                        </path>
+                        <path
+                            d="m154.567 41.4979-5.68 21.6792h4.518l.968-4.5709h5.679l.969 4.5709h4.517l-5.679-21.6792zm.581 13.4516 2.065-9.7295h.064l2.066 9.7295z">
+                        </path>
+                        <path
+                            d="m180.834 61.6752c-.065-.5876-.129-1.5018-.194-2.6119 0-.3918 0-.7836-.064-1.1101 0-.1959 0-.3265 0-.4571 0-.1959 0-.3918-.065-.5877 0-.2612-.064-.4571-.064-.7182 0-.9795-.323-1.8937-.904-2.6773-.645-.5877-1.484-.9795-2.388-1.0448v-.0653c1.097-.1959 2.065-.8489 2.711-1.763.645-1.1101.903-2.2855.839-3.5915.129-1.5671-.452-3.069-1.485-4.1791-1.161-.9795-2.646-1.4366-4.195-1.3713h-8.002v21.6792h4.324v-9.2071h2.323c.71-.0653 1.42.1959 1.936.7183.387.5877.646 1.306.646 2.0242l.129 4.1792c0 .3918.064.8488.129 1.2406.064.3918.193.7183.387 1.0448h4.647v-.1959c-.388-.3265-.646-.7836-.71-1.306zm-5.228-11.4272c-.71.5224-1.549.7836-2.388.7183h-1.807v-6.2687h2.065c2.001 0 2.969.9795 2.969 3.0037.129.9142-.193 1.8284-.839 2.5467z">
+                        </path>
+                        <path
+                            d="m188.062 59.5857v-5.8769h7.228v-3.5261h-7.228v-5.1586h7.68l-.065-3.5262h-11.939v21.6139h12.262v-3.5261z">
+                        </path>
+                    </g>
+                </svg></a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarsExampleXxl">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Our Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-xxl navbar-none bg-white fixed-top boder-bottom"
+        aria-label="Seventh navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"><svg class="site-header__logo-img" fill="none" height="52"
+                    viewBox="0 0 196 92" width="96" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#000">
+                        <path
+                            d="m0 0v72.4943l20.2003 6.0728 17.296 5.4851 22.7818 6.9869v-78.3948zm37.4963 72.0372-17.2654 6.5382v-33.0558l17.2654 4.1201z">
+                        </path>
+                        <path
+                            d="m76.358 77.6542h-5.034v-8.2929h-4.324v21.6792h4.324v-9.6643h5.034v9.6643h4.324v-21.6792h-4.324z">
+                        </path>
+                        <path
+                            d="m96.9616 72.1833c-.5163-.9795-1.2908-1.7631-2.1943-2.3507-2.4524-1.1101-5.2921-1.1101-7.7445 0-.9681.5223-1.7425 1.3712-2.1943 2.3507-.5163 1.1101-.9035 2.3508-.9681 3.5914-.3227 3.0038-.3227 6.0728 0 9.0765.1291 1.2407.4518 2.4161.9681 3.5262.5163.9795 1.2907 1.763 2.1943 2.2854 2.4524 1.0448 5.2921 1.0448 7.7445 0 .9681-.5224 1.7425-1.3059 2.1943-2.2854.5163-1.1101.9035-2.2855.968-3.5262.3227-3.0037.3227-6.0727 0-9.0765-.0645-1.3059-.3872-2.4813-.968-3.5914zm-3.1624 11.8191c-.0645.8488-.1936 1.6977-.4517 2.4813-.1291.5224-.4518 1.0448-.9036 1.3713-.968.5877-2.1297.5877-3.0978 0-.4517-.3918-.7744-.8489-.9035-1.3713-.2581-.7836-.3872-1.6325-.3872-2.4813-.0646-1.0448-.0646-2.2855-.0646-3.7221 0-1.4365.0646-2.6772.1291-3.722.0646-.8489.1936-1.6977.3872-2.4813.1291-.5224.4518-1.0448.9036-1.4366.968-.5877 2.1297-.5877 3.0978 0 .4517.3918.7744.8489.9035 1.4366.2581.7836.3872 1.6324.3872 2.4813.1291.9795.1291 2.2202.1291 3.722 0 1.5019-.0645 2.6773-.1291 3.7221z">
+                        </path>
+                        <path
+                            d="m110.008 84.6769c0 .5224 0 .9795-.129 1.5019-.064.3918-.194.7836-.387 1.1754-.194.3265-.452.5877-.775.7836-.387.1959-.839.3265-1.226.2612-.452 0-.839-.0653-1.226-.2612-.323-.1959-.581-.4571-.774-.7836-.194-.3918-.323-.7836-.388-1.1754-.064-.5224-.064-.9795-.064-1.5019v-15.0839h-4.324v15.1493c-.065 1.2406.129 2.416.581 3.5261.322.8489.839 1.5671 1.548 2.0895.646.5224 1.42.8489 2.195.9795.839.1959 1.678.2612 2.581.2612.839 0 1.743-.0653 2.582-.2612.774-.1959 1.549-.5224 2.194-1.0448.645-.5876 1.226-1.3059 1.549-2.1548.452-1.1101.645-2.2855.581-3.4609v-15.0839h-4.324v15.0839z">
+                        </path>
+                        <path
+                            d="m129.692 81.7386c-.387-.4571-.774-.9142-1.291-1.2407-.645-.4571-1.29-.8489-2-1.1101l-3.292-1.4366c-.71-.2612-1.355-.653-1.807-1.2406-.322-.5224-.452-1.1101-.387-1.6978 0-.3265.065-.653.129-.9142.065-.2612.194-.5877.387-.7836.194-.2612.452-.4571.775-.5877.387-.1306.774-.2612 1.226-.1959.71-.0653 1.42.2612 1.807.8489.387.7183.581 1.5672.516 2.3508h4.131v-.5877c0-.9142-.129-1.8284-.517-2.6773-.322-.7183-.774-1.3059-1.355-1.8283-.645-.5224-1.355-.8489-2.065-1.0448-.839-.1959-1.743-.3265-2.646-.3265-1.743-.1306-3.485.4571-4.84 1.5672-1.162 1.0447-1.743 2.6772-1.743 4.7668 0 .7836.129 1.5671.323 2.3507.193.653.581 1.306 1.032 1.7631.517.5224 1.098.9795 1.743 1.3713.774.4571 1.613.7836 2.517 1.0447.645.1959 1.226.4571 1.807.7183.452.1959.839.4571 1.162.7836.258.2612.516.5877.645.9795s.194.8489.194 1.2407c.064.7836-.259 1.5018-.775 2.0242-.516.4571-1.162.653-1.807.653-.452 0-.968-.0653-1.42-.2612-.322-.1306-.645-.3918-.839-.653-.258-.3265-.387-.6529-.452-1.0447-.064-.4571-.129-.9142-.129-1.3713v-.653h-4.324v.8489c-.129 1.6978.452 3.3302 1.549 4.6362 1.033 1.0448 2.775 1.6325 5.228 1.6325 1.936.1306 3.872-.4571 5.486-1.5672 1.29-1.0448 2-2.6773 2-4.9627 0-.5877-.064-1.2407-.193-1.8284-.259-.653-.517-1.1754-.775-1.5671z">
+                        </path>
+                        <path
+                            d="m136.985 81.8691h7.164v-3.5914h-7.164v-5.0933h7.615v-3.5914h-11.939v21.6791h12.262v-3.5914h-7.938z">
+                        </path>
+                        <path d="m71.1844 34.164h4.2595v-18.153h4.7112v-3.5261h-13.682v3.5261h4.7113z"></path>
+                        <path
+                            d="m87.2476 24.6593h5.0339v9.5989h4.3241v-21.6139h-4.3241v8.2277h-5.0339v-8.2277h-4.324v21.6139h4.324z">
+                        </path>
+                        <path
+                            d="m111.507 30.7321h-8.002v-5.8769h7.228v-3.5914h-7.228v-5.0933h7.68l-.065-3.5262h-11.9393v21.6139h12.3263z">
+                        </path>
+                        <path
+                            d="m73.572 63.5036c1.9362.1306 3.8723-.457 5.4857-1.6324 1.2908-1.0448 2.0007-2.6773 2.0007-4.9627 0-.5877-.0645-1.2407-.1936-1.8284-.1291-.5224-.3227-1.0448-.6454-1.5019-.3227-.457-.7744-.9141-1.2262-1.3059-.6454-.4571-1.2908-.8489-2.0007-1.1101l-3.4205-1.4366c-.7099-.2612-1.2907-.7183-1.7425-1.3059-.3227-.5224-.4517-1.1101-.3872-1.6978 0-.3265.0645-.653.1291-.9142.0645-.3265.1936-.5877.3872-.7836.1936-.2612.4518-.4571.7744-.5877.3873-.1306.7745-.1959 1.1617-.1959.7099-.0653 1.4199.2612 1.8071.8489.3872.7183.5808 1.5672.5163 2.3508h4.1949v-.5877c0-.9142-.129-1.8284-.5163-2.6773-.3227-.7183-.7744-1.3059-1.3553-1.8283-.6453-.4571-1.3553-.8489-2.1297-1.0448-.839-.1959-1.7425-.3265-2.6461-.3265-1.7425-.1306-3.485.4571-4.8403 1.5672-1.1617 1.0447-1.7425 2.6772-1.7425 4.7668 0 .7836.1291 1.5671.3227 2.3507.1936.653.5808 1.2407 1.0326 1.7631.5163.5224 1.0971.9795 1.678 1.3713.839.457 1.678.7835 2.5815 1.0447.5808.1959 1.1617.4571 1.7425.7183.4518.1959.839.4571 1.1617.7836.2581.2612.5163.5877.6454.9795.129.3918.1936.8489.1936 1.2407.0645.7835-.2582 1.5018-.7745 2.0242-.5163.3918-1.1617.653-1.807.653-.4518 0-.9681-.0653-1.4199-.2612-.3227-.1306-.6453-.3918-.839-.653-.2581-.3265-.3872-.653-.4517-1.0448-.0646-.457-.1291-.9141-.1291-1.3712v-.653h-4.324v.8489c-.1291 1.6977.4517 3.3955 1.5489 4.6362 1.0326 1.2407 2.7751 1.763 5.2275 1.763z">
+                        </path>
+                        <path
+                            d="m86.157 62.6547c2.4525 1.0447 5.2921 1.0447 7.7446 0 .968-.5224 1.6779-1.306 2.1942-2.2202.5163-1.1101.9036-2.2854.9681-3.5261.3227-3.0038.3227-6.0728 0-9.0765-.1291-1.2407-.4518-2.4161-.9681-3.5915-.5163-.9794-1.2907-1.763-2.1942-2.3507-2.4525-1.1101-5.2921-1.1101-7.7446 0-.968.5224-1.7425 1.3713-2.1942 2.3507-.5163 1.1101-.9036 2.3508-.9681 3.5915-.3227 3.0037-.3227 6.0727 0 9.0765.1291 1.2407.4518 2.416.9681 3.5261.4517.9142 1.2262 1.6978 2.1942 2.2202zm.9681-14.0392c.0645-.8489.1936-1.6978.3872-2.4814.1291-.5224.4518-1.0448.839-1.4366.4518-.3265 1.0326-.4571 1.5489-.4571s1.0972.1306 1.5489.4571c.4518.3918.7745.8489.9036 1.4366.2581.7836.3872 1.6325.3872 2.4814.1291.9794.1291 2.2201.1291 3.722 0 1.5018-.0646 2.6772-.1291 3.722-.0646.8489-.1936 1.6978-.3872 2.4814-.1291.5223-.4518 1.0447-.9036 1.3712-.4517.3265-.968.4571-1.5489.4571-.5808 0-1.0971-.1306-1.5489-.4571-.3872-.3918-.7099-.8489-.839-1.3712-.2581-.7836-.3872-1.6325-.3872-2.4814-.0645-1.0448-.1291-2.2855-.1291-3.722 0-1.4366.0646-2.7426.1291-3.722z">
+                        </path>
+                        <path d="m104.163 53.7088h7.228v-3.5261h-7.228v-5.1586h7.68v-3.5262h-12.0041v21.6139h4.3241z">
+                        </path>
+                        <path d="m117.264 63.1771h4.324v-18.153h4.711v-3.5262h-13.682v3.5262h4.647z"></path>
+                        <path
+                            d="m145.015 41.4326-2.323 16.0635h-.065l-2.452-16.0635h-4.131l-2.581 16.0635h-.065l-2.387-15.9982h-4.131l3.937 21.6139h4.776l2.388-15.737h.064l2.388 15.737h4.84l3.873-21.6792z">
+                        </path>
+                        <path
+                            d="m154.567 41.4979-5.68 21.6792h4.518l.968-4.5709h5.679l.969 4.5709h4.517l-5.679-21.6792zm.581 13.4516 2.065-9.7295h.064l2.066 9.7295z">
+                        </path>
+                        <path
+                            d="m180.834 61.6752c-.065-.5876-.129-1.5018-.194-2.6119 0-.3918 0-.7836-.064-1.1101 0-.1959 0-.3265 0-.4571 0-.1959 0-.3918-.065-.5877 0-.2612-.064-.4571-.064-.7182 0-.9795-.323-1.8937-.904-2.6773-.645-.5877-1.484-.9795-2.388-1.0448v-.0653c1.097-.1959 2.065-.8489 2.711-1.763.645-1.1101.903-2.2855.839-3.5915.129-1.5671-.452-3.069-1.485-4.1791-1.161-.9795-2.646-1.4366-4.195-1.3713h-8.002v21.6792h4.324v-9.2071h2.323c.71-.0653 1.42.1959 1.936.7183.387.5877.646 1.306.646 2.0242l.129 4.1792c0 .3918.064.8488.129 1.2406.064.3918.193.7183.387 1.0448h4.647v-.1959c-.388-.3265-.646-.7836-.71-1.306zm-5.228-11.4272c-.71.5224-1.549.7836-2.388.7183h-1.807v-6.2687h2.065c2.001 0 2.969.9795 2.969 3.0037.129.9142-.193 1.8284-.839 2.5467z">
+                        </path>
+                        <path
+                            d="m188.062 59.5857v-5.8769h7.228v-3.5261h-7.228v-5.1586h7.68l-.065-3.5262h-11.939v21.6139h12.262v-3.5261z">
+                        </path>
+                    </g>
+                </svg></a>
+            <button class="navbar-toggler collapsed h-100" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarsExampleXxl">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Our work
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Services
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                                body. Let's imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Technologies
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                                body. Nothing more exciting happening here in terms of content, but just filling up the
+                                space to make it look, at least at first glance, a bit more representative of how this
+                                would look in a real-world application.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Industries
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Company
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                Content hub
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                Career
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                body.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center">
+
+                    <button type="button" class="btn btn-primary mx-2"><a href="contact.html"
+                            style="text-decoration: none;">Contact Us</a></button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <hr>
+
+    <div class="container col-xxl-8 col-sm-12 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="Screenshot 2023-06-28 at 1.45.01 AM.png" class="d-block mx-lg-auto img-fluid" alt="img"
+                    width="750" height="550" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Speed up product delivery and unlock your
+                    cloud's potential</h1>
+                <p class="lead">Start in just weeks with our cloud-certified <strong>Node.js, React, and PHP
+                        teams</strong> that
+                    are likable. You’ll max out your product’s efficiency, secure it, and shrink your cloud bill.
+                    Recommended by 98% of CXOs.</p>
+                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Book free consultation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-right">
+        <div class="row">
+            <div class="col">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>The Software House was <strong> extremely well-prepared</strong> from the very beginning.</p>
+                <p style="font-size: 9; "><b>Tihomir Sablic</b></p>
+                <p>Product Manager at Reservix</p>
+
+
+            </div>
+            <div class="col">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>The project is <strong> a grand success.</strong> The user feedback is <strong>absolutely
+                        overwhelming.</strong></p>
+                <p style="font-size: 9; "><b>Kristian Kaa</b></p>
+                <p>CTO at TestaViva</p>
+            </div>
+            <div class="col">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>The Software House delivered a <strong> robust solution</strong> with <strong>high-quality
+                        code.</strong></p>
+                <p style="font-size: 9; "><b>Dariusz Kózka</b></p>
+                <p>CIO at Librus Sp. z o.o.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-1">Over 160 companies built efficient and
+                    flexible cloud-based solutions with us</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="px-4 py-5 mx-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis">The cloud can be the real advantage of your software
+                delivery
+                process</h1>
+            <div class="col-lg-11 mx-auto">
+                <p class="lead mb-4 text-center">Think about what you could do with a likable product team that already
+                    handled your
+                    cloud development challenges. Migrate more data and processes, minimize response times at the lowest
+                    achievable cost, or prepare your product for thousands of new end-users.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="cloud" class="container text-center ">
+        <div class="row row-cols-2">
+            <div class="col">
+                <h3><a href="#" style="color: black;">Cloud-native development</a></h3>
+            </div>
+            <div class="col">
+                <p>Your product’s foundation developed to lasts for years with a focus on stack flexibility, high
+                    availability, and top performance. We only use software development tools with strong community
+                    support.</p>
+            </div>
+            <div class="col">
+                <h3><a href="#" style="color: black;">Agile Development Teams on Demand t</a></h3>
+            </div>
+            <div class="col">Designers, Frontend/Backend Developers, DevOps, Cloud Engineers, and QAs you need now.
+                Scale the team up or down.</div>
+            <div class="col">
+                <h3><a href="#" style="color: black;">Cloud Engineering & DevOps</a></h3>
+            </div>
+            <div class="col">Software development services powering market expansion. Refactoring, cloud migration,
+                cloud-native development, and scaling.</div>
+            <div class="col">
+                <h3><a href="#" style="color: black;">Serverless development</a></h3>
+            </div>
+            <div class="col">Take out server management and scalability issues out of the picture by building on the
+                serverless framework — which is our secret talent.</div>
+            <div class="col">
+                <h3><a href="#" style="color: black;">Application modernization</a></h3>
+            </div>
+            <div class="col">Architecture, infrastructure, and functional modernization that prepare your product to
+                face current market challenges and take advantage of latest technologies.</div>
+            <div class="col">
+                <h3><a href="#" style="color: black;">Data Engineering </a></h3>
+            </div>
+            <div class="col">Give your data a job. Data migration and aggregation, pipeline setup, and insight
+                discovery. Scalable. You'll see the value in data ops as early as possible.</div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-1 m-5 ">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><a href style="color: black">Cloud-native
+                            development</a></h1>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Your product’s foundation developed to lasts for years with a focus on stack
+                        flexibility, high
+                        availability, and top performance. We only use software development tools with strong community
+                        support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-1 m-5 ">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><a href style="color: black">Agile
+                            Development Teams on Demand</a>
+                    </h1>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Designers, Frontend/Backend Developers, DevOps, Cloud Engineers, and QAs you need
+                        now. Scale the team up or down.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-1 m-5 ">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><a href style="color: black">Cloud
+                            Engineering & DevOps</a>
+                    </h1>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Software development services powering market expansion. Refactoring, cloud
+                        migration,
+                        cloud-native development, and scaling.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-1 m-5 ">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><a href style="color: black">Serverless
+                            development</a>
+                    </h1>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Take out server management and scalability issues out of the picture by building on
+                        the
+                        serverless framework — which is our secret talent.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-1 m-5 ">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><a href style="color: black">Application
+                            modernization</a>
+                    </h1>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Architecture, infrastructure, and functional modernization that prepare your product
+                        to
+                        face current market challenges and take advantage of latest technologies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container col-xxl-8 px-4 py-1 m-5 ">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><a href style="color: black">Data
+                            Engineering</a>
+                    </h1>
+                </div>
+                <div class="col-lg-5">
+                    <p class="lead">Give your data a job. Data migration and aggregation, pipeline setup, and insight
+                        discovery. Scalable. You'll see the value in data ops as early as possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div id="feedback" class="row m-5">
+            <div class="col-md-8 text-center">
+                <h3>“The user feedback is absolutely overwhelming“</h3>
+                <p>As said by CTO Kristian Kaa of TestaViva who’s been tweaking a legal platform with our experts for
+                    over 6 years. Can we help? </p>
+            </div>
+            <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                <button class="btn btn-light btn-lg" style="border-radius: 32px; color: #000ee6;">Book free
+                    consultation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="feedback" class="container mb-4 ">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 ">
+                <h3>“The user feedback is absolutely overwhelming“</h3>
+                <p>As said by CTO Kristian Kaa of TestaViva who’s been tweaking a legal platform with our experts for
+                    over 6 years. Can we help? </p>
+            </div>
+
+            <div class="col-lg-4 col-sm-12 d-grid gap-0 d-md-flex justify-content-md-center align-items-center ">
+                <button type="button" class="btn btn-light btn-lg px-4 py-4 me-md-2 ">Book free consultation</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <div class="container ">
+        <div class=" px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis">The tech stack behind competitive, cloud-native products
+            </h1>
+            <div class="col-lg-10 mx-auto">
+                <p class="lead mb-4 text-center">Just like you, we choose scalable and flexible technologies. The
+                    engineering mindset our talents have already solved the challenges of 160+ clients. Unsure how to
+                    lead development forward? Your future team will guide you to the most optimal software solutions and
+                    strategies.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mb-3 text-center">
+
+            <div id="server-less" class="col-md-5 themed-grid-col">
+                <div class="px-4 py-5 my-5 text-center">
+                    <img class="d-block mx-auto mb-4" style="max-width: 100%;
+                    height: auto;" src="/serverless.svg" alt="serverless.img" width="172" height="157">
+                    <h2 id="server-less-h1-font" class="display-5 fw-bold text-body-emphasis">Introduce software
+                        architecture solutions</h2>
+                    <div class="col-lg-6 mx-auto">
+                        <p id="server-less-p-font" class="lead mb-4 ">Adapt microservices, serverless, S3, and other AWS
+                            solutions with success using the guidance of architects and developers who completed
+                            projects in 7+ industries.</p>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="button" class="btn btn-link btn-lg px-4 gap-3">Learn more -></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="server-less" class="col-md-5 themed-grid-col "> -->
+            <div id="cloud-engineering" class="col-md-6 themed-grid-col">
+                <div class="px-4 py-5 my-5 text-center">
+                    <img class="d-block mx-auto mb-4" style="max-width: 100%;
+                    height: auto;" src="/cloud.svg" alt="cloud.img" width="272" height="257">
+                    <h2 id="server-less-h1-font" class="display-5 fw-bold text-body-emphasis">Access a certified
+                        cloud engineering team</h2>
+                    <div class="col-lg-6 mx-auto">
+                        <p id="server-less-p-font" class="lead mb-4 ">With engineers recognized by AWS, you’ll power
+                            up
+                            the product with cloud services without losing stability. As an AWS Consulting Partner,
+                            The
+                            Software House gives you access to 93 certified or accredited talents. That’s everyone
+                            needed for any cloud project.</p>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="button" class="btn btn-link btn-lg px-4 gap-3">Learn more -></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+
+
+    <div class="contanier col-sm-12 ">
+        <div class="video">
+            <iframe width="1020" height="545" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class=" px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis">Recommended by 98% of SME, startup, and scale-up clients
+            </h1>
+            <div class="col-lg-10 mx-auto">
+                <p class="lead mb-4 text-center">Just like you, we choose scalable and flexible technologies. The
+                    engineering mindset our talents have already solved the challenges of 160+ clients. Unsure how to
+                    lead development forward? Your future team will guide you to the most optimal software solutions and
+                    strategies.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="CTOs" class="row m-5">
+            <div class="col-md-8 text-center">
+                <h1>Work with teams CTOs praise as "super-friendly" and "reliable"</h1>
+            </div>
+            <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                <button class="btn btn-primary btn-lg" style="border-radius: 32px;">Book free consultation</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+        <h1 class="display-4 fw-bold text-body-emphasis text-center mb-5">Frequently asked questions</h1>
+        <div class="accordion accordion-flush" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong class="my-3"> Why should I consider your software development company as a
+                            partner?</strong>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Because we have 220+ technology talents that can assist you with product development at any
+                        stage of the project. Explore our case studies to discover how our partnerships of 4 months to 5
+                        years made businesses in 24 countries measurably competitive. Our About us page will show you
+                        who we are at heart and what we believe in.
+
+                        Also, do consider our Clutch reviews from CTOs, Product Owners, and Software Strategists who’ve
+                        delivered high-stakes projects with our development teams. Most opinion about our software
+                        solutions comes from phone interviews made by independent researchers.
+
+                        Have you heard Clutch ranked The Software House as the top custom software development company
+                        of 2020 in Poland?
+
+                        Then, you could schedule a free and private call about your development needs to see if we have
+                        a culture fit.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item ">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong class="my-3">Do you offer custom software development services for my industry?</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        We’re open to working with any industry. as our team’s strategy, project management, and
+                        development skills proved to be effective in blockchain, MedTech, or even government projects.
+                        The Software House has even provided support to other custom software development companies.
+                        There are of course industries for which we offer more refined experience and they include:
+                        Events; FinTech and banking; Travel; Marketplaces; Real estate, Marketing; Logistics &
+                        Transportation. Visit the Industries page to learn about our project expertise in these fields.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong class="my-3"> What’s your experience in enterprise software development?</strong>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        We’ve done custom software development for businesses of over 500+ employees. The largest
+                        software suite we’ve prepared was adopted by 7M users from several countries
+                        Most of the time, we’re developing custom software for clients.
+                        Our enterprise software projects included: building an e-government system for employed
+                        professionals; a B2B MedTech platform with employee services; or a search & delivery engine for
+                        a manufacturer of industrial parts.
+                        Since we work in Agile, we’re confident there’s a way to adjust to your company’s processes. The
+                        Software House also offers self-project-management through our PM to help with distributing
+                        project responsibilities. We can join a project at any stage of the software development life
+                        cycle.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <strong class="my-3"> What’s your experience in working on digital transformation
+                            projects?</strong>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                        For example, we’ve been involved in the creation of an ERP for nationwide labor management from
+                        zero.
+
+                        Before The Software Houses’ contribution, there were only pen and paper procedures instead of
+                        digital solutions. We also replaced analog operations through custom software development for an
+                        automation engineering enterprise and a transportation company.
+
+                        As our partner, you’ll have access to every specialist required for business process
+                        transformation. Per request, our Business Analysts will assist the development team business
+                        with requirement gathering, product roadmap creation, maintenance, and scaling.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <strong class="my-3"> Can I have durable team that will deliver custom software solutions over
+                            time?</strong>
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Yes, of course. One of our longer partnerships continues after 6 years, where the client started
+                        with a team of 6 software developers from The Software House and upscaled to 20 people.
+
+                        Your new team can be self-managed, where our PM leads the group and covers knowledge-sharing, or
+                        our talents can follow your CTOs, PMs, or POs leadership while advising on development strategy.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <strong class="my-3">Do you offer teams for mobile app development?</strong>
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Yes. While most of our projects start with web development, clients can count on us for React
+                        Native or PWA mobile app development for Android / iOS devices.
+
+                        Splitser, a bill-splitting app with over 1M+ downloads, became no. 1 in the Netherlands in the
+                        personal finance category after our upgrade from an MVP to a full product (case study).
+                        The Software House’s mobile team also designed and crafted an app called Smartum to serve as an
+                        employee benefit platform in Finland. 96% of users rated it as something they’d recommend (case
+                        study).
+                        If you need to expand your mobile team, contact us to discuss your plan and what you need to
+                        reach similar business results with your mobile apps.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2" src="/footer logos.png" alt="" width="204" height="119">
+                    <small class="d-block mb-3 text-body-secondary">© 2017–2023</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Web Development</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Mobile development</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Product Design</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cloud Development</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Quality Assurance</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Software
+                                Architecture</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">React Development</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">TypeScript</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Next.js Development</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Vue.js Development</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Knowledge</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">For CTOs</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Outsourcing
+                                guidebook</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">State of
+                                Microservices</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">State of Frontend</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
